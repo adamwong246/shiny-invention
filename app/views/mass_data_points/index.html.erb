@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Mass data points</h1>
+
+<div id="mass_data_points">
+  <% @mass_data_points.each do |mass_data_point| %>
+    <%= render mass_data_point %>
+    <p>
+      <%= link_to "Show this mass data point", mass_data_point %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New mass data point", new_mass_data_point_path %>

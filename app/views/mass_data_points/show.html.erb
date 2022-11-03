@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @mass_data_point %>
+
+<div>
+  <%= link_to "Edit this mass data point", edit_mass_data_point_path(@mass_data_point) %> |
+  <%= link_to "Back to mass data points", mass_data_points_path %>
+
+  <%= button_to "Destroy this mass data point", @mass_data_point, method: :delete %>
+</div>

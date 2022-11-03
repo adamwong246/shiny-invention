@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  recordedAt: 2022-11-03 14:44:04
+  mass: 9.99
+  unit: MyString
+
+two:
+  recordedAt: 2022-11-03 14:44:04
+  mass: 9.99
+  unit: MyString
