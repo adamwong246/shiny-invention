@@ -3,9 +3,9 @@
 one:
   recordedAt: 2022-11-03 14:44:04
   mass: 9.99
-  unit: MyString
+  unit: :kilograms
 
 two:
   recordedAt: 2022-11-03 14:44:04
   mass: 9.99
-  unit: MyString
+  unit: :grams

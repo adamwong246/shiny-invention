@@ -13,6 +13,9 @@ https://gist.github.com/ericve25/9bc1ef4fdf1a0908dcde45ca942ccbd0
 - install gems
 `bundle install`
 
+- run the tests
+`bin/rake`
+
 - migrate the DB
 `bin/rails db:migrate`
 
