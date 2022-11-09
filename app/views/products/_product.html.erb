@@ -9,4 +9,13 @@
     <%= product.productId %>
   </p>
 
+  <ul>
+
+    <% product.mass_data_points.each do |mass_data_point| %>
+    <li>
+        <%= render mass_data_point %>
+    </li>
+  <% end %>
+  </ul>
+
 </div>
