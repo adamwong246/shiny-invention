@@ -22,3 +22,6 @@ https://gist.github.com/ericve25/9bc1ef4fdf1a0908dcde45ca942ccbd0
 - start the server
 `bin/rails s`
 
+## more notes
+- test just a model
+`bin/rails test test/models/uploaded_file_test.rb`

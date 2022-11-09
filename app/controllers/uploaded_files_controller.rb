@@ -32,29 +32,11 @@ class UploadedFilesController < ApplicationController
   def create
     uploaded_file_params.permit!
 
-    blob = ActiveStorage::Blob.create_and_upload!(
-      io: uploaded_file_params[:source_csv_file],
-      filename: uploaded_file_params[:source_csv_file].original_filename,
-      content_type: uploaded_file_params[:source_csv_file].content_type
-    )
+    @table = CSV.read(uploaded_file_params[:source_csv_file].tempfile, headers: true)
 
-    table = CSV.parse(uploaded_file_params[:source_csv_file].read, headers: true) 
+    @uploaded_file = UploadedFile.new(uploaded_file_params).ingrest(@table)
 
-    table.each_with_index do |row, index|
-      puts row
-      # next if index == 0 # skip headers
-      # subscriber = Subscriber.find_or_initialize_by(email: row[1])
-      # subscriber.name = row[0]
-      # next unless subscriber.valid? # skip if subscriber data is invalid
-      # imported_subscriber << {name: subscriber.name, email: subscriber.email}
-    end
-
-    # puts "foo: ", table
-    # do |row, ndx|
-    #   puts ndx, " - ", row.inspect
-    # end
-
-    @uploaded_file = UploadedFile.new(uploaded_file_params)
+    @uploaded_file.save!
 
     respond_to do |format|
       if @uploaded_file.save
