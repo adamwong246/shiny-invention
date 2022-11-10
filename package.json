@@ -1,0 +1,13 @@
+{
+  "name": "canixTest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:adamwong246/sturdy-broccoli.git",
+  "author": "adam wong <adamwong246@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@tanstack/react-query": "^4.14.5",
+    "axios": "^1.1.3",
+    "webpack": "^5.75.0"
+  }
+}
