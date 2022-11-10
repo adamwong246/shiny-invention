@@ -33,7 +33,9 @@ function Products() {
   const { isLoading, error, data, isFetching } = useQuery(["products]"], () =>
     axios
       .get("http://localhost:3000/products.json")
-      .then((res) => res.data)
+      .then((res) => {
+        return res.data
+      })
   );
 
   // Mutations
@@ -47,11 +49,12 @@ function Products() {
 
   return (
     <div>
-      <ul>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+      {/* <ul>
         {data?.map(product => (
           <li key={product.id}>{JSON.stringify(product)}</li>
         ))}
-      </ul>
+      </ul> */}
 
       {/* <button
         onClick={() => {
