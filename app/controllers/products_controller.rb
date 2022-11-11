@@ -2,7 +2,11 @@ class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
 
   def app
-    @products = Product.all
+    @APP = Product.app()
+    respond_to do |format|
+      format.html { render html: @APP }
+      format.json { render json: @APP.to_json( :include => [:mass_data_points]) }
+    end
   end
 
   # GET /products or /products.json

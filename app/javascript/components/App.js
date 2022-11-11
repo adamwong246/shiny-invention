@@ -13,7 +13,6 @@ const queryClient = new QueryClient()
 
 class Greeting extends React.Component {
 
-
   render() {
     return (
       <React.Fragment>
@@ -32,7 +31,7 @@ function Products() {
   // Queries
   const { isLoading, error, data, isFetching } = useQuery(["products]"], () =>
     axios
-      .get("http://localhost:3000/products.json")
+      .get("http://localhost:3000/app.json")
       .then((res) => {
         return res.data
       })
