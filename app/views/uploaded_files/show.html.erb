@@ -1,6 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @uploaded_file %>
+<%= render @uploaded_file.mass_data_points %>
+<%= render @uploaded_file.products %>
 
 <div>
   <%= link_to "Edit this uploaded file", edit_uploaded_file_path(@uploaded_file) %> |

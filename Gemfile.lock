@@ -114,6 +114,8 @@ GEM
       mini_mime (>= 0.1.1)
     marcel (1.0.2)
     matrix (0.4.2)
+    measured (2.8.2)
+      activesupport (>= 5.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.16.3)
@@ -232,6 +234,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  measured
   puma (~> 5.0)
   rails (~> 7.0.4)
   react-rails

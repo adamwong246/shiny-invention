@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  categoryId: "abc"
-  productId: "123456"
+# one:
+#   categoryId: "abc"
+#   productId: "123456"
 
-two:
-  categoryId: "xyz"
-  productId: "98765"
+# two:
+#   categoryId: "xyz"
+#   productId: "98765"

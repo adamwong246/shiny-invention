@@ -33,6 +33,7 @@ function Products() {
     axios
       .get("http://localhost:3000/app.json")
       .then((res) => {
+        console.log(data)
         return res.data
       })
   );
@@ -48,6 +49,16 @@ function Products() {
 
   return (
     <div>
+      {/* <ul>
+        {
+          Object.keys(data).map((k, v) => {
+            return (<li>
+              {JSON.stringify(v)}
+            </li>)
+          })
+        }
+      </ul> */}
+
       <pre>{JSON.stringify(data, null, 2)}</pre>
       {/* <ul>
         {data?.map(product => (

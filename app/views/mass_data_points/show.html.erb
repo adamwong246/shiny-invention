@@ -1,6 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @mass_data_point %>
+<%= render @mass_data_point.uploaded_file %>
+<%= render @mass_data_point.product %>
 
 <div>
   <%= link_to "Edit this mass data point", edit_mass_data_point_path(@mass_data_point) %> |

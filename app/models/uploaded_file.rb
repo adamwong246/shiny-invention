@@ -1,9 +1,10 @@
 class UploadedFile < ApplicationRecord
   has_many :mass_data_points
+  has_many :products, -> { distinct }, through: :mass_data_points
 
   has_one_attached :source_csv_file
 
-  def ingrest(lines)
+  def ingest(lines)
 
     lines.each_with_index do |row, index|
 

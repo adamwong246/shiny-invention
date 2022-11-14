@@ -28,7 +28,7 @@ end
 
 class UploadedFileIngestTest < UploadedFileTest
   def setup
-    @uploaded_file = UploadedFile.new().ingrest([
+    @uploaded_file = UploadedFile.new().ingest([
       ["2021-03-01 01:30:32.977497+00:00",	"DAY-1A406020000607D000003322", "0.160",	"kilograms"],
       ["2021-03-01 01:30:32.977497+00:00",	"FOO-1A406020000607D000003322", "3",	"stones"],
     ])

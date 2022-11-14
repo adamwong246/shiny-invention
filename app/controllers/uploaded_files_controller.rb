@@ -33,8 +33,7 @@ class UploadedFilesController < ApplicationController
     uploaded_file_params.permit!
 
     @table = CSV.read(uploaded_file_params[:source_csv_file].tempfile, headers: true)
-
-    @uploaded_file = UploadedFile.new(uploaded_file_params).ingrest(@table)
+    @uploaded_file = UploadedFile.new(uploaded_file_params).ingest(@table)
 
     @uploaded_file.save!
 

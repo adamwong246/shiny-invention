@@ -2,10 +2,14 @@ class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
 
   def app
-    @APP = Product.app()
+    @app = Product.app()
     respond_to do |format|
-      format.html { render html: @APP }
-      format.json { render json: @APP.to_json( :include => [:mass_data_points]) }
+      format.html { render :app }
+      # format.json { render json: @APP.to_json( :include => [:mass_data_points, :uploaded_files]) }
+      format.json { 
+        render json: @app.to_json(include: {mass_data_points: {include: {uploaded_file: {include: :mass_data_points}}}})
+        # render json: @APP.to_json( :include => [:mass_data_points, {uploaded_files:}])
+      }
     end
   end
 
